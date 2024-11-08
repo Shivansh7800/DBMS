@@ -1,21 +1,3 @@
-REM   Script: Session 03
-REM   dbms
-
-CREATE TABLE Course ( 
-    DeptNo NUMBER(2) PRIMARY KEY, 
-    Dname VARCHAR2(20), 
-    Location VARCHAR2(10) 
-);
-
-CREATE TABLE Student ( 
-    StudentId NUMBER(4) PRIMARY KEY, 
-    StudentName VARCHAR2(40) NOT NULL, 
-    Address1 VARCHAR2(300), 
-    Gender VARCHAR2(15), 
-    Course VARCHAR2(8), 
-    Deptno NUMBER(2), 
-    CONSTRAINT fk_dept FOREIGN KEY (Deptno) REFERENCES Course (Deptno) 
-);
 
 INSERT INTO Course (DeptNo, Dname, Location) VALUES (10, 'Computer Science', 'New York');
 
